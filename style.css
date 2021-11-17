@@ -48,7 +48,7 @@ ul.gallery {
   position: relative;
 }
 .gallery li,
-.gallery li img,
+.gallery li img.border,
 .gallery li span {
   border-radius: 50%;
 }
@@ -71,4 +71,74 @@ ul.gallery {
 .gallery li a:hover span {
   opacity: 1;
   transform: scale(1) rotate(360deg);
+}
+.overlay {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1;
+  transition: 0.5s;
+  text-align: center;
+  padding: 100px 0;
+}
+.overlay:target {
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.overlay img {
+  max-height: 100%;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+}
+.overlay:target img {
+  animation: zoomfade 0.5s;
+}
+.overlay .close {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  margin-left: -35px;
+  color: sandybrown;
+  text-decoration: none;
+  background-color: wheat;
+  border: 2px solid rgb(230, 189, 140);
+  padding: 2px;
+  opacity: 0;
+}
+.overlay:target .close {
+  animation: slidedownfade 0.5s 0.3s forwards;
+}
+@keyframes zoomfade {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes slidedownfade {
+  0% {
+    opacity: 0;
+    margin-top: -20px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 415px) {
+  .container {
+    width: auto;
+  }
+  .overlay img {
+    max-width: 100%;
+  }
 }

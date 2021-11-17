@@ -44,7 +44,7 @@ ul.gallery {
   height: 120px;
   border: 5px solid rgb(230, 189, 140);
   float: left;
-  margin-right: 20px;
+  margin-left: 15px;
   position: relative;
 }
 .gallery li,
@@ -140,6 +140,7 @@ ul.gallery {
   }
   .gallery li {
     margin-bottom: 10px;
+    margin-left: 15px;
   }
   .overlay img {
     max-width: 100%;

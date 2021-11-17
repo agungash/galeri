@@ -138,6 +138,9 @@ ul.gallery {
   .container {
     width: auto;
   }
+  .gallery li {
+    margin-bottom: 10px;
+  }
   .overlay img {
     max-width: 100%;
   }

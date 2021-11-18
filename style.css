@@ -97,7 +97,7 @@ ul.gallery {
   box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
 }
 .overlay:target img {
-  animation: zoomfade 0.5s;
+  animation: fade 0.5s;
 }
 .overlay .close {
   position: absolute;
@@ -114,13 +114,30 @@ ul.gallery {
 .overlay:target .close {
   animation: slidedownfade 0.5s 0.3s forwards;
 }
-@keyframes zoomfade {
+.overlay:target .next,
+.overlay:target .prev {
+  animation: fade 0.5s 0.3s forwards;
+}
+.next,
+.prev {
+  width: 57px;
+  height: 93px;
+  background-image: url(gambar/next.png);
+  position: absolute;
+  text-indent: -9999px;
+  top: 40%;
+  margin-left: 50px;
+  opacity: 0;
+}
+.prev {
+  background-image: url(gambar/prev.png);
+  margin-left: -100px;
+}
+@keyframes fade {
   0% {
-    transform: scale(0);
     opacity: 0;
   }
   100% {
-    transform: scale(1);
     opacity: 1;
   }
 }
@@ -142,7 +159,18 @@ ul.gallery {
     margin-bottom: 10px;
     margin-left: 12px;
   }
+  .next {
+    margin-left: 20px;
+  }
+  .prev {
+    margin-left: -80px;
+  }
+  .overlay .close {
+    top: 20%;
+  }
   .overlay img {
+    width: 200px;
     max-width: 100%;
+    margin-top: 120px;
   }
 }

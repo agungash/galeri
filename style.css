@@ -120,8 +120,8 @@ ul.gallery {
 }
 .next,
 .prev {
-  width: 57px;
-  height: 93px;
+  width: 43px;
+  height: 74px;
   background-image: url(gambar/next.png);
   position: absolute;
   text-indent: -9999px;
@@ -163,7 +163,7 @@ ul.gallery {
     margin-left: 20px;
   }
   .prev {
-    margin-left: -80px;
+    margin-left: -60px;
   }
   .overlay .close {
     top: 20%;

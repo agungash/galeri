@@ -45,6 +45,7 @@ ul.gallery {
   border: 5px solid rgb(230, 189, 140);
   float: left;
   margin-left: 15px;
+  margin-bottom: 10px;
   position: relative;
 }
 .gallery li,
@@ -156,7 +157,6 @@ ul.gallery {
     width: auto;
   }
   .gallery li {
-    margin-bottom: 10px;
     margin-left: 12px;
   }
   .next {
@@ -171,6 +171,6 @@ ul.gallery {
   .overlay img {
     width: 200px;
     max-width: 100%;
-    margin-top: 10px;
+    margin-top: 15px;
   }
 }

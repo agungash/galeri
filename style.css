@@ -166,10 +166,11 @@ ul.gallery {
     margin-left: -60px;
   }
   .overlay .close {
-    top: 20%;
+    top: 10%;
   }
   .overlay img {
     width: 200px;
     max-width: 100%;
+    margin-top: 20px;
   }
 }
